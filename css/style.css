@@ -1,0 +1,77 @@
+body{
+    background-color: #eee9e9;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: blue;
+}
+
+.container{
+    height: 80vh;
+    width: 80%;
+    margin: 44px auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inputtasks{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    margin: 26px 36px 24px 36px;
+}
+.inputtasks button{
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    width: 105px;
+    height: 45px;
+    border: none;
+    font-size: 18px;
+}
+input{
+    width: 73%;
+    height: 44px;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 0px 12px;
+    border-radius: 6px;
+}
+input:focus{
+    outline: 2px solid blue;
+}
+.tasks{
+    height: 75%;
+    overflow-y: auto;
+}
+.delete{
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding: 6px 4px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 255);
+    cursor: pointer;
+}
+.individualTask{
+    width: auto;
+    border-radius: 5px;
+    display: flex;
+    margin: 4px 38px;
+    border: 1px solid #0adbdee1;
+    background-color: #70bbde;
+    justify-content: space-between;
+}
+.individualTask p{
+    margin-left: 12px;
+    font-size: 18px;
+}
+.individualTask button{
+    margin-right: 13px;
+    height: 90%;
+    align-self: center;
+}
