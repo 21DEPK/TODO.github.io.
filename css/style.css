@@ -34,7 +34,8 @@ body{
     font-size: 18px;
 }
 input{
-    width: 75%;
+    flex-grow:1;
+    margin-right: 5px;
     height: 43px;
     font-size: 20px;
     border: 1px solid;
