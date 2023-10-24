@@ -1,14 +1,15 @@
 let input = document.querySelector("input");
 let add = document.querySelector(".inputtasks button");
-let del = document.querySelectorAll(".delete");
 let inputTasks = document.querySelector(".tasks");
+let del = inputTasks.children;
+let len = del.length;
 
 let Add = () => {
     if(input.value!==''){
-        inputTasks.innerHTML = `<div class="individualTask">
+        inputTasks.innerHTML += `<div class="individualTask">
         <p>${input.value}</p>
         <button class="delete"><span class="material-symbols-outlined">delete</span></button>
-        </div>`
+        </div>`;
         input.value = '';
     }else{
         alert(`Task is Empty!`);
@@ -17,8 +18,8 @@ let Add = () => {
 
 add.addEventListener("click", Add);
 
-for(items of del){
-    items.addEventListener("click",()=>{
-        console.log("Deleted!");
+for(let i=0;i<len;i++){
+    del[i].lastElementChild.addEventListener("click",()=>{
+        del[i].remove();
     })
 }
