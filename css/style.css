@@ -1,5 +1,6 @@
 body{
-    background-color: #eee9e9;
+    background-color: rgba(17, 17, 226, 0.86);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -10,32 +11,31 @@ body{
 }
 
 .container{
-    height: 80vh;
+    height: 90vh;
     width: 80%;
-    margin: 44px auto;
+    margin: 2% auto;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 .inputtasks{
     display: flex;
     width: auto;
     justify-content: space-between;
-    margin: 26px 36px 24px 36px;
+    margin: 26px 36px 88px 36px;
 }
 .inputtasks button{
     color: white;
     background-color: blue;
-    border-radius: 5px;
-    width: 105px;
+    border-radius: 8px;
+    width: 95px;
     height: 45px;
     border: none;
     font-size: 18px;
 }
 input{
-    width: 73%;
-    height: 44px;
+    width: 75%;
+    height: 43px;
     font-size: 20px;
     border: 1px solid;
     padding: 0px 12px;
@@ -45,15 +45,21 @@ input:focus{
     outline: 2px solid blue;
 }
 .tasks{
-    height: 75%;
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: 75%;
     overflow-y: auto;
 }
 .delete{
     color: white;
     border: none;
+    height: 90%;
+    max-height: 80%;
     font-size: 12px;
-    padding: 6px 4px;
-    border-radius: 5px;
+    padding: 6px 8px;
+    margin-right: 10px;
+    align-self: center;
+    border-radius: 6px;
     background-color: rgb(0, 0, 255);
     cursor: pointer;
 }
@@ -61,7 +67,7 @@ input:focus{
     width: auto;
     border-radius: 5px;
     display: flex;
-    margin: 4px 38px;
+    margin: 6px 38px;
     border: 1px solid #0adbdee1;
     background-color: #70bbde;
     justify-content: space-between;
@@ -70,8 +76,16 @@ input:focus{
     margin-left: 12px;
     font-size: 18px;
 }
-.individualTask button{
-    margin-right: 13px;
-    height: 90%;
-    align-self: center;
+
+@media (max-width: 500px){
+    .inputtasks{
+        flex-direction: column;
+    }
+    input{
+        width: auto;
+    }
+    .inputtasks button{
+        margin-top: 12px;
+        width: 100%;
+    }
 }
