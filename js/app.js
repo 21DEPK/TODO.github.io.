@@ -7,7 +7,7 @@ let Add = () => {
     if (input.value !== '') {
         inputTasks.innerHTML += `<div class="individualTask">
         <p>${input.value}</p>
-        <button class="delete" onclick="deleteDynamicTasks();"><span class="material-symbols-outlined">delete</span></button>
+        <button class="delete"><span class="material-symbols-outlined">delete</span></button>
         </div>`;
         input.value = '';
         deleteDynamicTasks();
