@@ -5,21 +5,24 @@ let del = inputTasks.children;
 let len = del.length;
 
 let Add = () => {
-    if(input.value!==''){
+    if (input.value !== '') {
         inputTasks.innerHTML += `<div class="individualTask">
         <p>${input.value}</p>
         <button class="delete"><span class="material-symbols-outlined">delete</span></button>
         </div>`;
+        len++;
         input.value = '';
-    }else{
+        deleteDynamicTasks();
+    } else {
         alert(`Task is Empty!`);
     }
 }
-
-add.addEventListener("click", Add);
-
-for(let i=0;i<len;i++){
-    del[i].lastElementChild.addEventListener("click",()=>{
-        del[i].remove();
-    })
+function deleteDynamicTasks() {
+    for (let i = 0; i < len; i++) {
+        del[i].lastElementChild.addEventListener("click", () => {
+            del[i].remove();
+            len--;
+        })
+    }
 }
+add.addEventListener("click", Add);
