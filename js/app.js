@@ -14,3 +14,8 @@ let Add = () => {
     }
 }
 add.addEventListener("click", Add);
+window.addEventListener("keypress", (k) => {
+  if (k.key == "Enter") {
+    Add();
+  }
+});
